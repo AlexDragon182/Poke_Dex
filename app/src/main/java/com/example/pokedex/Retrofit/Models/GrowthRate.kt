@@ -1,4 +1,4 @@
-package com.example.pokedex.Response_Object
+package com.example.pokedex.Retrofit.Models
 
 data class GrowthRate(
     val name: String,
