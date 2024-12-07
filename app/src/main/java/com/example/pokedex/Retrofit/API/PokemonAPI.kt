@@ -12,7 +12,7 @@ interface PokemonAPI {
         @GET("v2/pokemon-species")
         suspend fun getPokemon(
             @Query("q")
-            pokemonQuery: Query,
+            pokemonQuery: String,
             @Query("page")
             pokemonPage:Int =  1
         ): Response<PokemonResponse>

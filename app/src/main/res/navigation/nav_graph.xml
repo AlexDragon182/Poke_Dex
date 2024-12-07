@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pokemon_List">
+
+    <fragment
+        android:id="@+id/pokemon_List"
+        android:name="com.example.pokedex.fragments.Pokemon_List"
+        android:label="fragment_pokemon_list"
+        tools:layout="@layout/fragment_pokemon_list" >
+        <action
+            android:id="@+id/action_pokemon_List_to_pokemonStats3"
+            app:destination="@id/pokemonStats" />
+    </fragment>
+    <fragment
+        android:id="@+id/pokemonStats"
+        android:name="com.example.pokedex.fragments.PokemonStats"
+        android:label="fragment_pokemon_stats"
+        tools:layout="@layout/fragment_pokemon_stats" />
+</navigation>

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.PokemonStats">
 
-    <!-- TODO: Update blank fragment layout -->
     <ImageView
         android:id="@+id/Pokemon_Front"
         android:layout_width="200dp"

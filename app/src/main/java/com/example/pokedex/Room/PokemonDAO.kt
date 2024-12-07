@@ -14,9 +14,9 @@ interface PokemonDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(pokemon:Pokemon):Long
 
-    @Query("SELECT * FROM pokemons")
+    @Query("SELECT * FROM Pokemon_db")
     fun getAllPokemons () : LiveData<List<Pokemon>>
 
     @Delete
-    suspend fun  delePokemon(pokemon: Pokemon)
+    suspend fun  deletePokemon(pokemon: Pokemon)
 }
