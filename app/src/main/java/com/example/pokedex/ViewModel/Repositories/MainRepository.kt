@@ -1,5 +1,6 @@
 package com.example.pokedex.ViewModel.Repositories
 
+import com.example.pokedex.Retrofit.Models.Name
 import com.example.pokedex.Retrofit.Models.Pokemon
 import com.example.pokedex.Retrofit.retrofitInstance
 import com.example.pokedex.Room.PokemonDAO
@@ -14,7 +15,10 @@ class MainRepository @Inject constructor(
 
     suspend fun upsert(pokemon: Pokemon) = pokemonDAO.upsert(pokemon)
 
-    suspend fun getPokemon(pokemonQuery:String,pokemonPage:Int) = retrofitInstance.api.getPokemon(pokemonQuery,pokemonPage)
+    suspend fun searchPokemon(pokemonQuery:String,pokemonPage:Int) = retrofitInstance.api.searchPokemon(pokemonQuery,pokemonPage)
 
     suspend fun getDetail (pokemonId:Int) = retrofitInstance.api.getDetail(pokemonId)
+
+    suspend fun getPokemon (pokemonPage: Int) = retrofitInstance.api.getPokemon(pokemonPage)
+
 }

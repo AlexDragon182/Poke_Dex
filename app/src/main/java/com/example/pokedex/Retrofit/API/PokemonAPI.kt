@@ -10,9 +10,15 @@ import retrofit2.http.Path
 
 interface PokemonAPI {
         @GET("v2/pokemon-species")
-        suspend fun getPokemon(
+        suspend fun searchPokemon(
             @Query("q")
             pokemonQuery: String,
+            @Query("page")
+            pokemonPage:Int =  1
+        ): Response<PokemonResponse>
+
+        @GET("v2/pokemon-species")
+        suspend fun getPokemon(
             @Query("page")
             pokemonPage:Int =  1
         ): Response<PokemonResponse>
