@@ -4,12 +4,12 @@
     android:layout_height="75dp">
 
     <ImageView
-        android:id="@+id/Pokemon_Face"
+        android:id="@+id/ivPokemon_Face"
         android:layout_width="75dp"
-        android:layout_height="match_parent"/>_
+        android:layout_height="match_parent"/>
 
     <TextView
-        android:id="@+id/Pokemon_Name"
+        android:id="@+id/tvPokemon_Name"
         android:textAlignment="center"
         android:layout_width="300dp"
         android:layout_height="match_parent"/>
