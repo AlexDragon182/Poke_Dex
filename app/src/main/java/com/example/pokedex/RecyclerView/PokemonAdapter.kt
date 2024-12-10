@@ -10,9 +10,10 @@ import com.example.pokedex.Retrofit.Models.Pokemon
 import com.example.pokedex.databinding.RvpokemonitemBinding
 
 import okhttp3.internal.http2.Http2Connection
+import javax.inject.Inject
 
 
-class PokemonAdapter (
+class PokemonAdapter @Inject constructor (
     private val context: Context,
     list:List<Pokemon>
 ): RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder>() {
