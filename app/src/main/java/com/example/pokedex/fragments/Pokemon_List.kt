@@ -57,16 +57,6 @@ class Pokemon_List : Fragment(R.layout.fragment_pokemon_list) {
 
 }
 
-    private fun setupRecyclerView(){// function to setup recycler view
-        pokeAdapter = PokemonAdapter(requireContext())// variable newsAdapter set it up to NewsAdapter(the real adapter)
-        binding.rvPokemon.apply{   // apply the adapter in the layout
-            pokeAdapter = PokemonAdapter // set the adapter to news adapter
-            layoutManager = LinearLayoutManager(activity) // set layout Manager to linear Layout Manager activity
-
-        }
-
-    }
-
     }
 
 
