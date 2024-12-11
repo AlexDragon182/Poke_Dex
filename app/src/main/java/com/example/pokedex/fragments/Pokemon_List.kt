@@ -1,9 +1,12 @@
 package com.example.pokedex.fragments
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -47,8 +50,20 @@ class Pokemon_List : Fragment(R.layout.fragment_pokemon_list) {
                 is Resource.Success -> {
                     println("success")
                     response.data?.let{
-                        pokeAdapter.differ.submitList(PokemonResponse.)
+                        pokeAdapter.differ.submitList(PokemonResponse)
                     }
+                }
+                is Resource.Error ->{// if our resource is error
+                    //hideProgressBar() // hide progress barr
+                    response.message?.let { message -> //
+                        Log.e (TAG,"An error ocurred : $message")
+                        Toast.makeText(activity,"an Error Occurred : $message", Toast.LENGTH_LONG).show()
+
+                    }
+                }
+                is Resource.Loading-> {// if it is loading
+                    //showProgressBar()// progress bar show
+
                 }
 
             }
